@@ -1,0 +1,696 @@
+@use "variable" as var;
+@use "function" as fun;
+
+/* =============================
+ベース
+============================= */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: var.$font-ja;
+  font-size: 1.6rem;
+  color: var.$color-font;
+  letter-spacing: 0.05em;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: var.$color-font;
+}
+li {
+  list-style: none;
+}
+*,
+*::before,
+::before {
+  box-sizing: border-box;
+}
+
+.font-en {
+  font-family: var.$font-en;
+}
+
+.only-sp {
+  display: none;
+}
+
+/* コンテンツ ------------- */
+.container {
+  width: 100%;
+  max-width: var.$width-container;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.wrapper {
+  width: 100%;
+  max-width: var.$width-wrapper;
+  margin: 0 auto;
+}
+
+/* タイトル ------------- */
+.section-title__box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.section-title {
+  font-size: 6rem;
+}
+.title-after-border {
+  margin-left: 30px;
+  width: 200px;
+  height: 5px;
+  background: var.$color-headerBg;
+}
+.section-bottom-title {
+  font-size: 9rem;
+  color: var.$color-font_title_btm;
+  opacity: 0.05;
+}
+
+/* ボタン ------------- */
+.btn {
+  text-align: center;
+  margin: 0 auto;
+  padding: 18px 0;
+  a,
+  input {
+    background: var.$color-btn;
+    padding: 18px 70px;
+    box-shadow: 0 0 6px var.$color-btn_shadow;
+    border-radius: 80px;
+  }
+}
+
+/* =============================
+ヘッダー
+============================= */
+#header {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: 0.5s;
+}
+.header {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__site-title {
+    h1 {
+      color: var.$color-font_w;
+      font-size: 2.6rem;
+    }
+  }
+  &__nav {
+    &--list {
+      display: flex;
+    }
+    .nav--item {
+      margin-right: 30px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      a {
+        color: var.$color-font_w;
+      }
+    }
+  }
+}
+/* fv後 ------------- */
+.js-fix.after-fv {
+  background: var.$color-headerBg;
+}
+/* hgメニュー ------------- */
+.hg-btn {
+  display: none;
+}
+
+/* ===================================
+main
+=================================== */
+/* =============================
+fv
+============================= */
+.fv {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  &__slide-list {
+    max-width: 100vw;
+    height: 100vh;
+    img {
+      width: 100%;
+      height: 100vh;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    &--en,
+    &--ja {
+      color: var.$color-font_w;
+    }
+    &--en {
+      font-size: 7rem;
+      margin-bottom: 30px;
+    }
+    &--ja {
+      font-size: 4rem;
+      line-height: fun.line-height(40, 50);
+    }
+  }
+}
+/* =============================
+concept
+============================= */
+#concept {
+  margin: 100px auto 70px;
+}
+.concept {
+  &__pickup {
+    font-size: 3rem;
+    text-align: center;
+    line-height: fun.line-height(30, 50);
+  }
+  &__content {
+    margin: 60px auto 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--text {
+      font-weight: bold;
+      width: 44%;
+      line-height: fun.line-height();
+    }
+    &--img {
+      max-height: 100%;
+      max-width: 44%;
+    }
+  }
+  &__bottom-title {
+    text-align: right;
+  }
+}
+
+/* =============================
+works
+============================= */
+#works {
+  background-image: url(../img/works-bgi@2x.jpg);
+  background-size: cover;
+}
+.works {
+  &__title {
+    justify-content: right;
+    color: var.$color-font_w;
+    padding-top: 100px;
+    .title-after-border {
+      background: var.$color-font_w;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+    &::after {
+      content: "";
+      display: block;
+      width: 320px;
+      height: 0;
+    }
+  }
+  &__card {
+    width: 320px;
+    background: var.$color-font_w;
+    text-align: center;
+    p {
+      display: inline-block;
+      padding: 25px 20px;
+      text-align: left;
+      line-height: fun.line-height();
+    }
+  }
+  &__bottom-title {
+    color: var.$color-font_w;
+    opacity: 0.1;
+    padding: 70px 0;
+  }
+}
+/* =============================
+service
+============================= */
+#service {
+  margin: 100px auto 70px;
+}
+.service {
+  &__content {
+    display: flex;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  &__item {
+    flex-grow: 1;
+    position: relative;
+    &:hover &--img {
+      opacity: 0.7;
+      transition: .3s;
+    }
+    &--img {
+      width: 100%;
+      object-fit: cover;
+    }
+    &--text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var.$color-font_w;
+      font-size: 4rem;
+      line-height: fun.line-height(40, 50);
+    }
+  }
+}
+.img-box {
+  background: #000;
+}
+.service__bottom-title {
+  text-align: right;
+}
+
+/* =============================
+top-contact
+============================= */
+#top-contact {
+  background-image: url(../img/contact-bgi@2x.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.top-contact {
+  &__title {
+    justify-content: right;
+    color: var.$color-font_w;
+    padding-top: 100px;
+    span {
+      background: var.$color-font_w;
+    }
+  }
+  &__text {
+    color: var.$color-font_w;
+    font-size: 2rem;
+    line-height: fun.line-height(20, 24);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__bottom-title {
+    color: var.$color-font_w;
+    opacity: 0.05;
+    padding: 70px 0;
+  }
+}
+
+/* =============================
+contact(子ページ)
+============================= */
+#sub-main {
+  padding-top: 453px;
+}
+.contact {
+  &__box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  &__img {
+    height: 453px;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__box--inner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-10%);
+    width: 100vw;
+    max-height: 50%;
+  }
+  &__title {
+    color: var.$color-font_w;
+    text-align: center;
+  }
+  &__bottom-title {
+    color: var.$color-font_w;
+    padding-left: 50px;
+  }
+}
+/* form ------------- */
+.contact__form {
+  max-width: 700px;
+  width: 100%;
+  margin: 100px auto 62px;
+  &--row {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    &:last-of-type {
+      margin-bottom: 80px;
+    }
+    p {
+      margin-bottom: 7px;
+    }
+    input[type=text],
+    textarea {
+      border: 1px solid var.$color-font;
+      margin-top: 5px;
+    }
+  }
+  .btn {
+    margin-top: 55px;
+  }
+}
+.radio-box {
+  display: flex;
+}
+.Radio {
+  margin-right: 20px;
+  &-Input {
+    appearance: none;
+    position: absolute;
+  }
+  &-Text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  &-Text::before {
+    content: '';
+    display: block;
+    border: 1px solid var.$color-font;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+  }
+}
+.Radio-Input:checked+.Radio-Text::after {
+  content: '';
+  position: absolute;
+  left: calc(8px - 5px);
+  display: block;
+  width: 4px;
+  height: 8px;
+  border-right: 1px solid var.$color-font;
+  border-bottom: 1px solid var.$color-font;
+  transform: rotate(45deg);
+}
+
+/* =============================
+footer
+============================= */
+#footer {
+  text-align: center;
+  padding: 30px 0;
+}
+small {
+  font-size: 1.4rem;
+}
+
+/* =========================================
+SP
+========================================= */
+@media screen and (max-width: 768px) {
+  /* =============================
+  ベース
+  ============================= */
+  .only-pc {
+    display: none;
+  }
+  .only-sp {
+    display: block;
+  }
+  /* タイトル ------------- */
+  .section-title__box {
+    margin-bottom: 0;
+  }
+  .section-title {
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+  }
+  .title-after-border {
+    margin-left: 30px;
+    width: 90px;
+  }
+  .section-bottom-title {
+    font-size: 4rem;
+  }
+
+  /* コンテンツ ------------- */
+  .container {
+    padding: 0 15px;
+  }
+
+  /* =============================
+  ヘッダー
+  ============================= */
+  .header__nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var.$color-headerBg;
+    display: none;
+    z-index: 20;
+    &--list {
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .nav--item {
+      margin-right: 0;
+      margin-bottom: 30px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .js-noScroll {
+    overflow: hidden;
+  }
+
+  /* hgメニュー ------------- */
+  .hg-btn {
+    display: block;
+    width: 30px;
+    height: 23px;
+    position: relative;
+    z-index: 30;
+    .bar {
+      width: 100%;
+      height: 3px;
+      background: var.$color-font_w;
+      display: block;
+      position: absolute;
+      left: 0;
+      transition: 0.3s;
+      &__top {
+        top: 0;
+      }
+      &__mid {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &__bottom {
+        bottom: 0;
+      }
+    }
+  }
+  /* hgメニュー クリック後------------- */
+  .hg-btn.show-hg {
+    .bar {
+      &__top {
+        transform: translateY(10px) rotate(45deg);
+      }
+      &__mid {
+        opacity: 0;
+      }
+      &__bottom {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+  }
+
+  /* =============================
+  fv
+  ============================= */
+  .fv {
+    &__text {
+      text-align: center;
+      &--en {
+        font-size: 3.7rem;
+        margin-bottom: 60px;
+      }
+      &--ja {
+        font-size: 3rem;
+        line-height: fun.line-height(30, 50);
+      }
+    }
+  }
+
+  /* =============================
+  concept
+  ============================= */
+  #concept {
+    margin: 100px auto 40px;
+  }
+  .concept {
+    &__pickup {
+      font-size: 2rem;
+      line-height: fun.line-height($size: 20);
+      margin-top: 55px;
+    }
+    &__content {
+      margin: 34px auto 40px;
+      flex-direction: column;
+      &--text {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      &--img {
+        max-width: 100%;
+      }
+    }
+  }
+  /* =============================
+  works
+  ============================= */
+  .works {
+    &__content {
+      margin: 50px 0;
+      gap: 30px;
+    }
+    &__bottom-title {
+      padding: 40px 0;
+    }
+  }
+
+  /* =============================
+  service
+  ============================= */
+  #service {
+    margin: 100px auto 64px;
+  }
+  .service {
+    &__content {
+      flex-direction: column;
+      margin: 80px 0 40px;
+    }
+    &__item {
+      margin-bottom: 30px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &--text {
+        font-size: 2rem;
+        line-height: fun.line-height(20, 50);
+      }
+    }
+  }
+  /* =============================
+  top-contact
+  ============================= */
+  .top-contact {
+    &__text {
+      margin: 80px 0 30px;
+    }
+    &__bottom-title {
+      padding: 40px 0;
+    }
+  }
+
+  /* =============================
+  contact(子ページ)
+  ============================= */
+  #sub-main {
+    padding-top: 360px;
+  }
+  .contact {
+    &__img {
+      height: 360px;
+    }
+    &__bottom-title {
+      color: var.$color-font_w;
+      padding: 40px 0 0 50px;
+    }
+  }
+  /* form ------------- */
+  .contact__form {
+    &--row {
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .radio-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .Radio {
+    margin-right: 0px;
+    margin-bottom: 5px;
+    &-Input {
+      appearance: none;
+      position: absolute;
+    }
+    &-Text {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+    }
+    &-Text::before {
+      content: '';
+      display: block;
+      border: 1px solid var.$color-font;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      left: 0;
+    }
+  }
+  .Radio-Input:checked+.Radio-Text::after {
+    content: '';
+    position: absolute;
+    left: calc(8px - 5px);
+    display: block;
+    width: 4px;
+    height: 8px;
+    border-right: 1px solid var.$color-font;
+    border-bottom: 1px solid var.$color-font;
+    transform: rotate(45deg);
+  }
+}

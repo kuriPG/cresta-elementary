@@ -1,0 +1,32 @@
+// =============================
+// 基本設定
+// =============================
+
+// フォント ------------
+// 和文
+$font-ja:  Noto Serif JP, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+// 欧文
+$font-en:  Noto Serif, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+// 色 ------------
+// フォント(黒)
+$color-font: #141414;
+// フォント(白)
+$color-font_w: #FFF;
+// フォント(タイトル下)
+$color-font_title_btm: #171717;
+// ヘッダー背景
+$color-headerBg: #282F35;
+// ボタン
+$color-btn: #F7D43F;
+// ボタン影
+$color-btn_shadow: #1B1310;
+
+// 幅 ------------
+// コンテンツ(大)
+$width-container: 1200px;
+// コンテンツ(小)
+$width-wrapper: 1000px;
+
+// 文字高さ ------------
+$line-height-: 1200px;
