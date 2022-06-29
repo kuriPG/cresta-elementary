@@ -1,14 +1,13 @@
 @charset "UTF-8";
 /* =============================
-base
+ベース
 ============================= */
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: Noto Serif JP, Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", Meiryo, sans-serif;
+  font-family: Noto Serif JP, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 1.6rem;
   color: #141414;
   letter-spacing: 0.05em;
@@ -38,8 +37,7 @@ li {
 }
 
 .font-en {
-  font-family: Noto Serif, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
-    Meiryo, sans-serif;
+  font-family: Noto Serif, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
 .only-sp {
@@ -75,7 +73,7 @@ li {
   margin-left: 30px;
   width: 200px;
   height: 5px;
-  background: #282f35;
+  background: #282F35;
 }
 
 .section-bottom-title {
@@ -92,14 +90,14 @@ li {
 }
 .btn a,
 .btn input {
-  background: #f7d43f;
+  background: #F7D43F;
   padding: 18px 70px;
-  box-shadow: 0 0 6px #1b1310;
+  box-shadow: 0 0 6px #1B1310;
   border-radius: 80px;
 }
 
 /* =============================
-header
+ヘッダー
 ============================= */
 #header {
   width: 100%;
@@ -118,7 +116,7 @@ header
   align-items: center;
 }
 .header__site-title h1 {
-  color: #fff;
+  color: #FFF;
   font-size: 2.6rem;
 }
 .header__nav--list {
@@ -131,12 +129,12 @@ header
   margin-right: 0;
 }
 .header__nav .nav--item a {
-  color: #fff;
+  color: #FFF;
 }
 
 /* fv後 ------------- */
 .js-fix.after-fv {
-  background: #282f35;
+  background: #282F35;
 }
 
 /* hgメニュー ------------- */
@@ -172,9 +170,8 @@ fv
   left: 0;
   width: 100%;
 }
-.fv__text--en,
-.fv__text--ja {
-  color: #fff;
+.fv__text--en, .fv__text--ja {
+  color: #FFF;
 }
 .fv__text--en {
   font-size: 7rem;
@@ -226,11 +223,11 @@ works
 
 .works__title {
   justify-content: right;
-  color: #fff;
+  color: #FFF;
   padding-top: 100px;
 }
 .works__title .title-after-border {
-  background: #fff;
+  background: #FFF;
 }
 .works__content {
   display: flex;
@@ -247,7 +244,7 @@ works
 }
 .works__card {
   width: 320px;
-  background: #fff;
+  background: #FFF;
   text-align: center;
 }
 .works__card p {
@@ -257,7 +254,7 @@ works
   line-height: 1.875;
 }
 .works__bottom-title {
-  color: #fff;
+  color: #FFF;
   opacity: 0.1;
   padding: 70px 0;
 }
@@ -291,7 +288,7 @@ service
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: #FFF;
   font-size: 4rem;
   line-height: 1.25;
 }
@@ -315,21 +312,21 @@ top-contact
 
 .top-contact__title {
   justify-content: right;
-  color: #fff;
+  color: #FFF;
   padding-top: 100px;
 }
 .top-contact__title span {
-  background: #fff;
+  background: #FFF;
 }
 .top-contact__text {
-  color: #fff;
+  color: #FFF;
   font-size: 2rem;
   line-height: 1.2;
   text-align: center;
   margin-bottom: 40px;
 }
 .top-contact__bottom-title {
-  color: #fff;
+  color: #FFF;
   opacity: 0.05;
   padding: 70px 0;
 }
@@ -361,11 +358,11 @@ contact(子ページ)
   max-height: 50%;
 }
 .contact__title {
-  color: #fff;
+  color: #FFF;
   text-align: center;
 }
 .contact__bottom-title {
-  color: #fff;
+  color: #FFF;
   padding-left: 50px;
 }
 
@@ -386,7 +383,7 @@ contact(子ページ)
 .contact__form--row p {
   margin-bottom: 7px;
 }
-.contact__form--row input[type="text"],
+.contact__form--row input[type=text],
 .contact__form--row textarea {
   border: 1px solid #141414;
   margin-top: 5px;
@@ -486,7 +483,7 @@ SP
   }
 
   /* =============================
-  header
+  ヘッダー
   ============================= */
   .header__nav {
     width: 100vw;
@@ -494,7 +491,7 @@ SP
     position: fixed;
     top: 0;
     left: 0;
-    background: #282f35;
+    background: #282F35;
     display: none;
     z-index: 20;
   }
@@ -529,7 +526,7 @@ SP
   .hg-btn .bar {
     width: 100%;
     height: 3px;
-    background: #fff;
+    background: #FFF;
     display: block;
     position: absolute;
     left: 0;
@@ -650,7 +647,7 @@ SP
     height: 360px;
   }
   .contact__bottom-title {
-    color: #fff;
+    color: #FFF;
     padding: 40px 0 0 50px;
   }
 
